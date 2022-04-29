@@ -1,18 +1,22 @@
 package org.maybe.salt.assignment.models;
 
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-@Getter
-@RequiredArgsConstructor
 public enum FieldType {
-    INT("int"),
-    STRING("String"),
-    BOOLEAN("Boolean"),
-    LIST("List"),
-    DATE("Date"),
-    EMAIL("Email"),
-    UUID("UUID"),
-    AUTH_TOKEN("Auth-Token");
-    private final String value;
+    @JsonProperty("Int")
+    INT,
+    @JsonProperty("String")
+    STRING,
+    @JsonProperty("Boolean")
+    BOOLEAN,
+    @JsonProperty("List")
+    LIST,
+    @JsonProperty("Date")
+    DATE,
+    @JsonProperty("Email")
+    EMAIL,
+    @JsonProperty("UUID")
+    UUID,
+    @JsonProperty("Auth-Token")
+    AUTH_TOKEN
 }

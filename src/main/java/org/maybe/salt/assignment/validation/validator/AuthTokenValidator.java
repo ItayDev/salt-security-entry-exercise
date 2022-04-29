@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 @Component
 public class AuthTokenValidator extends RegexValidator {
-    public AuthTokenValidator(Pattern regex) {
+    public AuthTokenValidator() {
         super(Pattern.compile("^Bearer\\s[a-zA-Z0-9]*$"));
     }
 

@@ -1,4 +1,4 @@
-package org.maybe.salt.assignment.models;
+package org.maybe.salt.assignment.models.request;
 
 import lombok.Data;
 

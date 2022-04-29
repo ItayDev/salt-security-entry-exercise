@@ -14,12 +14,12 @@ public class DateValidator implements TypeValidator {
     private final String dateFormat = "dd-MM-yyyy";
 
     @Override
-    public Optional<Collection<TypeValidationError>> validate(JsonNode fieldValue) {
+    public Optional<TypeValidationError> validate(JsonNode fieldValue) {
         if(GenericValidator.isDate(fieldValue.asText(), this.dateFormat, true)) {
             return Optional.empty();
         }
 
-        return Optional.of(Collections.singletonList(new TypeValidationError("Not a valid date")));
+        return Optional.of(new TypeValidationError("Not a valid date"));
     }
 
     @Override

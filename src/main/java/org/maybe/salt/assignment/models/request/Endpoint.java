@@ -1,4 +1,4 @@
-package org.maybe.salt.assignment.models;
+package org.maybe.salt.assignment.models.request;
 
 import lombok.Data;
 import org.springframework.http.HttpMethod;
@@ -6,7 +6,7 @@ import org.springframework.http.HttpMethod;
 import java.util.Collection;
 
 @Data
-public class Endpoint<T extends Field> {
+public abstract class Endpoint<T extends Field> {
     private String path;
     private HttpMethod method;
     private Collection<T> queryParams;

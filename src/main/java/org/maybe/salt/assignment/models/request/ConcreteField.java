@@ -1,4 +1,4 @@
-package org.maybe.salt.assignment.models;
+package org.maybe.salt.assignment.models.request;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import lombok.Data;

@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 @Configuration
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class ValidationsConfiguration {
-    List<TypeValidator> validators;
+    private final List<TypeValidator> validators;
 
     @Bean
     Map<FieldType, List<TypeValidator>> getValidators() {
