@@ -1,6 +1,7 @@
 package org.maybe.salt.assignment.controllers;
 
 import lombok.RequiredArgsConstructor;
+import org.maybe.salt.assignment.models.EndpointClassificationSchema;
 import org.maybe.salt.assignment.models.request.ModelEndpoint;
 import org.maybe.salt.assignment.models.request.RequestEndpoint;
 import org.maybe.salt.assignment.models.response.ValidationResponse;
@@ -25,7 +26,7 @@ public class EndpointValidationController {
 
     @PostMapping("/endpoint/validate")
     public ValidationResponse validate(@RequestBody RequestEndpoint requestEndpoint) {
-        Optional<ModelEndpoint> modelEndpoint = this.modelRegistry.get(requestEndpoint.getPath(), requestEndpoint.getMethod());
+        Optional<EndpointClassificationSchema> modelEndpoint = this.modelRegistry.get(requestEndpoint.getPath(), requestEndpoint.getMethod());
 
         if(modelEndpoint.isEmpty()) {
             return ValidationResponse.builder()

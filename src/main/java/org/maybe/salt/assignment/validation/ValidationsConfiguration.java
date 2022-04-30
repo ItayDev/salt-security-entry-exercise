@@ -17,7 +17,7 @@ public class ValidationsConfiguration {
     private final List<TypeValidator> validators;
 
     @Bean
-    Map<FieldType, List<TypeValidator>> getValidators() {
+    Map<FieldType, List<TypeValidator>> getValidatorsFactory() {
         return validators.stream().collect(Collectors.groupingBy(TypeValidator::getValidationType));
     }
 }

@@ -2,11 +2,12 @@ package org.maybe.salt.assignment.models.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Builder;
-import lombok.Getter;
 import lombok.Value;
 import org.springframework.http.HttpMethod;
 
 import java.util.Map;
+
+import static org.maybe.salt.assignment.utils.CollectionUtils.isMapEmpty;
 
 @Value
 @Builder
@@ -26,9 +27,5 @@ public class ValidationResponse {
         }
 
         return "ERROR";
-    }
-
-    private static <k, v> boolean isMapEmpty(Map<k, v> map) {
-        return map == null || map.isEmpty();
     }
 }

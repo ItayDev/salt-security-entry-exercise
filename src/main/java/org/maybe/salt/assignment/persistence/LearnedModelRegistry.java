@@ -1,5 +1,6 @@
 package org.maybe.salt.assignment.persistence;
 
+import org.maybe.salt.assignment.models.EndpointClassificationSchema;
 import org.maybe.salt.assignment.models.request.ModelEndpoint;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
@@ -13,13 +14,13 @@ import java.util.concurrent.ConcurrentHashMap;
 //  on the database / wanted response times a cache server such as Redis could be used as well.
 @Service
 public class LearnedModelRegistry {
-    private final Map<String, ModelEndpoint> savedModels = new ConcurrentHashMap<>();
+    private final Map<String, EndpointClassificationSchema> savedModels = new ConcurrentHashMap<>();
 
     public void register(ModelEndpoint endpoint) {
-        savedModels.put(formatEndpointName(endpoint.getPath(), endpoint.getMethod()), endpoint);
+        savedModels.put(formatEndpointName(endpoint.getPath(), endpoint.getMethod()), new EndpointClassificationSchema(endpoint));
     }
 
-    public Optional<ModelEndpoint> get(String endpointPath, HttpMethod method) {
+    public Optional<EndpointClassificationSchema> get(String endpointPath, HttpMethod method) {
         return Optional.ofNullable(savedModels.get(formatEndpointName(endpointPath, method)));
     }
 
