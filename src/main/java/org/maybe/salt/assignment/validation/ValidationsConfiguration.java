@@ -2,7 +2,7 @@ package org.maybe.salt.assignment.validation;
 
 import lombok.RequiredArgsConstructor;
 import org.maybe.salt.assignment.models.FieldType;
-import org.maybe.salt.assignment.validation.validator.TypeValidator;
+import org.maybe.salt.assignment.validation.type.TypeValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

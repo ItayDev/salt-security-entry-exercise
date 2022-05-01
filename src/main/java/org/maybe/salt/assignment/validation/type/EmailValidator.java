@@ -1,4 +1,4 @@
-package org.maybe.salt.assignment.validation.validator;
+package org.maybe.salt.assignment.validation.type;
 
 import org.maybe.salt.assignment.models.FieldType;
 import org.springframework.stereotype.Component;

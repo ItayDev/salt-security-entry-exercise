@@ -7,8 +7,8 @@ import org.maybe.salt.assignment.models.FieldType;
 import org.maybe.salt.assignment.models.request.*;
 import org.maybe.salt.assignment.models.response.ValidationErrorReport;
 import org.maybe.salt.assignment.models.response.ValidationResponse;
-import org.maybe.salt.assignment.validation.validator.TypeValidationError;
-import org.maybe.salt.assignment.validation.validator.TypeValidator;
+import org.maybe.salt.assignment.validation.type.TypeValidationError;
+import org.maybe.salt.assignment.validation.type.TypeValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -21,11 +21,11 @@ public class ValidationResponse {
     @Builder.Default
     boolean schemaExists = true;
 
-    public String getStatus() {
+    public StatusType getStatus() {
         if (isMapEmpty(this.queryParams) && isMapEmpty(this.headers) && isMapEmpty(this.body) && schemaExists) {
-            return "OK";
+            return StatusType.OK;
         }
 
-        return "ERROR";
+        return StatusType.ERROR;
     }
 }

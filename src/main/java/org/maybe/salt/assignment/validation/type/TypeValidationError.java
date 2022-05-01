@@ -1,4 +1,4 @@
-package org.maybe.salt.assignment.validation.validator;
+package org.maybe.salt.assignment.validation.type;
 
 import lombok.RequiredArgsConstructor;
 import lombok.Value;
